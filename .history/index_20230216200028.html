@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rennar's Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Ren's Dumb Website</h1>
+      
+    </header>
+     <!-- "About" section -->
+     <section id="about" class="intro">
+        <!--Replace with your own image-->
+        <center><img src="renpic.JPG"
+            alt="RennarPicture" height=375px;>
+        <h2 class="section-title">Hi, I'm Ren!</h2>
+        <p>
+            A little bit about myself, I'm Rennar, or Ren for short. I'm a 25 year old girl from North Dakota
+            who is currently living in Chicago, Illinois. My hobbies are mainly focused on my home lab, and security research.
+            <br><br>
+            My other hobbies include a little bit of light gaming when I have the time, skateboarding, cooking, and photography.</center>   
+	</p>
+    </section>
+    <main>
+      <article>
+        <h2>pwnOS Boot to Root</h2>
+
+        <img src="boot2root.png" alt="Boot2Root">
+
+        Since Microsoft Azure decided to nuke my whole website and does not offer backups without
+        paying for them, I'm going to keep this short and sweet.
+
+            <br><br>
+        
+        pwnOS 2.0 isn't known as a difficult box to break into, but it makes for a good starting out
+        point for people new to CTFs. A quick rundown of this box is that it is a simple blog for a
+        company, running a vulnerable version of SimplePHP. Executing a remote command to reset
+        the admin password is a fairly simple perl script that comes with Kali Linux, after running it,
+        you can log into the site. 
+        
+            <br><br>
+
+        This doesn't get you very far, but you'll be able to upload ANY file
+        you would like. So naturally I set up netcat, uploaded and ran a reverse shell. After this its
+        fairly trivial to find the root password in a config file the website owner left us, and now
+        we can directly ssh into the box as root, completing this CTF.
+      </article>  
+      <article>
+        <h3>Going over the homelab</h2>
+        
+                        <img src="rackpic.JPG" alt="RensRack">
+        
+                        I have FINALLY unpacked my rack here in Chicago, so now I can do a little bit of writing about it! 
+                    
+                            <br><br>
+                        
+
+                        First up is the antique on my rack, a Dell Poweredge 2950 rackmounted server, it's completely
+                        maxed out with 16GB of DDR2 RAM and 2 Xeon processors. All it does is run pfSense. On pfSense
+                        I have a few VLANs set up for IoT devices, one for my pentesting lab, and one for my "secure" 
+                        systems, such as my laptop, desktop, and the server I actually want to be able to reach out 
+                        to the internet as a whole. I also run SNORT on this system for an IPS for a little more piece 
+                        of mind.
+                    
+                            <br><br> 
+
+                        The more modern server is my Dell r820, running ESXI 6.7, on which I have my pentesting lab, 
+                        along with a samba server, and in the future will probably run this website once I'm more confident
+                        in my webdev skills! In fact, you may be accessing this webpage running on that server right now and 
+                        I just haven't updated the website yet to tell you guys! Other things that run on this server are a
+                        couple of Kali boxes, along with some vulnerable machines to toy around with in my free time without
+                        clogging up my laptop's storage with virtual machines.
+
+                            <br><br> 
+
+                        Last but not least is my two cisco switches, one 2960x and an sg300. Not much to be said about these,
+                        while I am familiar with the Cisco ecosystem from 2 years of Cisco networking class, I did not feel 
+                        the need to set up much on them past the initial changing passwords, due to pfSense pretty much handling
+                        everything. The SG300 is set up to actually access the internet, while the 2960x is only an internal
+                        network, and runs my pentesting lab.
+
+                            <br><br>
+
+                        That about sums it up, in the future I plan on setting up a PLEX server on the r820, along with expanding
+                        the storage to store media files and have a proper RAID config instead of the current RAID0 array (this is
+                        simply due to limitations on how much money I can throw at 2.5" SAS drives and SSD's). Hopefully this was 
+                        interesting, and I will keep this updated as I add new things and new services to my ecosystem!
+        
+      </article>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>
