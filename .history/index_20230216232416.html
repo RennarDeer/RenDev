@@ -37,13 +37,14 @@
 
         <img src="boot2root.png" alt="Boot2Root">
 
-        <p class="content">
-          
-          Since Microsoft Azure decided to nuke my whole website and does not offer backups without
-        paying for them, I'm going to keep this short and sweet.
-            
-          <br><br>  
+        <p>Since Microsoft Azure decided to nuke my whole website and does not offer backups without
+        paying for them, I'm going to keep this short and sweet.</p>
 
+        <button id="read-more-btn">Read More</button>
+
+        <div id="article-more" style="display: none;">
+            
+            <p>
         pwnOS 2.0 isn't known as a difficult box to break into, but it makes for a good starting out
         point for people new to CTFs. A quick rundown of this box is that it is a simple blog for a
         company, running a vulnerable version of SimplePHP. Executing a remote command to reset
@@ -57,17 +58,16 @@
         fairly trivial to find the root password in a config file the website owner left us, and now
         we can directly ssh into the box as root, completing this CTF.
         </p>        
-        <button onclick="readMore(this)">Read More</button>
+        <script src="readmore.js"></script>
         </article>  
       <article>
         <h3>Going over the homelab</h3>
         
                         <img src="rackpic.JPG" alt="RensRack">
-
-                        <p class="content">
-
-                        I have FINALLY unpacked my rack here in Chicago, so now I can do a little bit of writing about it!
-                        
+        
+                        I have FINALLY unpacked my rack here in Chicago, so now I can do a little bit of writing about it! 
+                    
+                            <br><br>
                         
 
                         First up is the antique on my rack, a Dell Poweredge 2950 rackmounted server, it's completely
@@ -78,7 +78,12 @@
                         of mind.
 
                         <br><br>
-                            
+                    
+                        <button id="read-more-btn">Read More</button>
+
+                        <div id="article-more" style="display: none;">
+
+                            <p>
                         The more modern server is my Dell r820, running ESXI 6.7, on which I have my pentesting lab, 
                         along with a samba server, and in the future will probably run this website once I'm more confident
                         in my webdev skills! In fact, you may be accessing this webpage running on that server right now and 
@@ -100,15 +105,13 @@
                         the storage to store media files and have a proper RAID config instead of the current RAID0 array (this is
                         simply due to limitations on how much money I can throw at 2.5" SAS drives and SSD's). Hopefully this was 
                         interesting, and I will keep this updated as I add new things and new services to my ecosystem!
+                            </p>
                         
-                          </p>
-                        <button onclick="readMore(this)">Read More</button>
-                        
+                            
+        
             </article>
     </main>
     <footer>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
